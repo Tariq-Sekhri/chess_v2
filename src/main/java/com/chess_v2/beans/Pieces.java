@@ -6,7 +6,7 @@ public enum Pieces {
     Rook(5),
     Bishop(3),
     Knight(3),
-    pawn(1);
+    Pawn(1);
 
     private int value;
     private Pieces (int value){
