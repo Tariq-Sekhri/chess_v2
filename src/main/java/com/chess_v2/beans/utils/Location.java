@@ -5,15 +5,15 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Vector2 {
+public class Location {
     private int x;
     private int y;
 
-    public Vector2(Vector2 location){
+    public Location(Location location){
         x = location.getX();
         y = location.getY();
     }
-    public Vector2(int x , int y){
+    public Location(int x , int y){
         this.x = x;
         this.y = y;
     }
