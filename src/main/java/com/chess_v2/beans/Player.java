@@ -1,5 +1,7 @@
 package com.chess_v2.beans;
 
+import com.chess_v2.beans.utils.ChessPieces;
+import com.chess_v2.beans.utils.Color;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -7,6 +9,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Player {
-private String name;
-private boolean isWhite;
+    private String name;
+
+    Color color;
+
+    Player(String name, Color color) {
+    this.name= name;
+    this.color =  color;
+    }
+
+    public boolean isWhite(){
+        return color == Color.White;
+    }
 }

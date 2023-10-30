@@ -1,6 +1,6 @@
-package com.chess_v2.beans;
+package com.chess_v2.beans.utils;
 
-public enum Pieces {
+public enum ChessPieces {
     King(1000000000),
     Queen(9),
     Rook(5),
@@ -9,7 +9,7 @@ public enum Pieces {
     Pawn(1);
 
     private int value;
-    private Pieces (int value){
+    private ChessPieces(int value){
         this.value = value;
     }
 
