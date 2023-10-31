@@ -57,7 +57,8 @@ public class gui extends Application {
     }
 
     public void addPiece(Piece piece) throws FileNotFoundException {
-        grid.add(piece.getImageVeiw(),piece.getLocation().getX(),piece.getLocation().getY());
+        Location temp = new Location(locationToGridPaneCorordinate(piece.getLocation()));
+        grid.add( piece.getImageVeiw(),temp.getX(),temp.getY());
     }
 
     public void initBoard() throws FileNotFoundException {
@@ -73,4 +74,12 @@ public class gui extends Application {
         addPiece(new Queen(new Location(3,4), com.chess_v2.beans.utils.Color.Black));
         addPiece(new Queen(new Location(2,2), com.chess_v2.beans.utils.Color.Black));
     }
+
+    public Location locationToGridPaneCorordinate(Location location){
+                return new Location(8-location.getX(), 8-location.getY());
+    }
+
+//    public Location GridPaneCorordinateTolocation(Location location){
+//                return new Location(8-location.getX(), 8-location.getY());
+//    }
 }
