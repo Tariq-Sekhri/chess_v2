@@ -29,8 +29,7 @@ public class gui extends Application {
 
 
         grid = new GridPane();
-        Queen q1 = new Queen(new Location(0,0), com.chess_v2.beans.utils.Color.Black);
-        addPiece(q1);
+
 
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
@@ -43,8 +42,9 @@ public class gui extends Application {
                 grid.add(square, x, y);
             }
         }
+        Queen q1 = new Queen(new Location(1,1), com.chess_v2.beans.utils.Color.Black);
 
-
+        addPiece(q1);
 
         Scene scene = new Scene(grid, 800, 800);
 

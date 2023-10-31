@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 public class Game {
     private Player p1;
     private Player p2;
-    private Board board = new Board();
+//    private Board board = new Board();
 
     private String PGN;
 
