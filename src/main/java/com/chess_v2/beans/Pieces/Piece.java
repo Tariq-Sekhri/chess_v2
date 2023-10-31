@@ -23,7 +23,7 @@ public abstract class Piece {
     private ArrayList<Location> possibleMoves;
     private Location location;
 
-   private ImageView imageVeiw;
+   private ImageView pieceAtlas;
 
 
 
@@ -31,9 +31,9 @@ public abstract class Piece {
         this.setColor(color);
         this.setLocation(location);
         this.setPiece(piece);
-        imageVeiw= new ImageView(new Image(new FileInputStream("src/main/resources/pieceAtlas.png")));
-        imageVeiw.setScaleX(0.9);
-        imageVeiw.setScaleY(0.9);
+        pieceAtlas = new ImageView(new Image(new FileInputStream("src/main/resources/pieceAtlas.png")));
+        pieceAtlas.setScaleX(0.9);
+        pieceAtlas.setScaleY(0.9);
     }
     public void move(Location location){
     if(this.getPossibleMoves().contains(location)){

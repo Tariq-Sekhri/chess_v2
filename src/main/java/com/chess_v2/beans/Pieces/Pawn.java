@@ -21,9 +21,9 @@ public class Pawn extends Piece {
     public Pawn(Location location, Color color)  throws FileNotFoundException {
         super(location, color, ChessPieces.Pawn);
         if (color == Color.Black) {
-            getImageVeiw().setViewport(new Rectangle2D(680, 20, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(860, 25, 96, 96));
         }else{
-            getImageVeiw().setViewport(new Rectangle2D(680, 120, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(860, 170, 96, 96));
         }
          isFirstMove= true;
     }

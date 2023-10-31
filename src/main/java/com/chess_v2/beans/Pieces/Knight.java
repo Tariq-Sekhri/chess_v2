@@ -18,9 +18,9 @@ public class Knight extends Piece {
     public Knight(Location location, Color color) throws FileNotFoundException {
         super(location, color, ChessPieces.Knight);
         if (color == Color.Black) {
-            getImageVeiw().setViewport(new Rectangle2D(680, 20, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(690, 25, 96, 96));
         }else{
-            getImageVeiw().setViewport(new Rectangle2D(680, 120, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(685, 165, 96, 96));
         }
     }
     @Override

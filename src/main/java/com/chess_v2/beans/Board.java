@@ -35,6 +35,7 @@ public void initBoard() throws FileNotFoundException {
     board[7][5] = new Bishop( new Location(7, 5),Color.Black);
     board[7][6] = new Knight( new Location(7, 6),Color.Black);
     board[7][7] = new Rook( new Location(7, 7),Color.Black);
+
 }
 
 }

@@ -15,9 +15,9 @@ public class Queen extends Piece {
             super(location, color, ChessPieces.Queen);
 
         if (color == Color.Black) {
-            getImageVeiw().setViewport(new Rectangle2D(185, 20, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(190, 22.5, 96, 96));
         }else{
-            getImageVeiw().setViewport(new Rectangle2D(185, 120, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(190, 165, 96, 96));
         }
 
     }

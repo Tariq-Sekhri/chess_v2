@@ -1,18 +1,32 @@
 package com.chess_v2.beans;
 
-import com.chess_v2.beans.Pieces.Piece;
-import com.chess_v2.beans.Pieces.Rook;
-import com.chess_v2.beans.utils.Color;
-import com.chess_v2.beans.utils.Location;
+
+import com.chess_v2.beans.UserInterface.BoardGui;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Data
-@NoArgsConstructor
+
 public class GameMaster {
 
-    Game game;
-    public void newGame(){
+
+    private static GameMaster instance;
+    private Game game;
+
+    // private constructor to avoid client applications using the constructor
+    private GameMaster() {
+
+    }
+
+    public static GameMaster getInstance() {
+        if(instance == null){
+            instance = new GameMaster();
+
+        }
+        return instance;
+    }
+
+    public void newGame() {
         game = new Game();
 
     }

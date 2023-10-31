@@ -13,9 +13,9 @@ public class Rook extends Piece{
     public Rook(Location location, Color color)  throws FileNotFoundException {
         super(location, color, ChessPieces.Rook);
         if (color == Color.Black) {
-            getImageVeiw().setViewport(new Rectangle2D(680, 20, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(357, 25, 96, 96));
         }else{
-            getImageVeiw().setViewport(new Rectangle2D(680, 120, 96, 96));
+            getPieceAtlas().setViewport(new Rectangle2D(357, 165, 96, 96));
         }
     }
 
