@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Game {
-    Player p1;
-    Player p2;
-    private Piece[][] board = new Piece[8][8];
+    private Player p1;
+    private Player p2;
+    private Board board = new Board();
     private String PGN;
 
     Game(String[] PlayerNames) {

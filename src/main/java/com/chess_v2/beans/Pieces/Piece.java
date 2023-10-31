@@ -18,6 +18,12 @@ public abstract class Piece {
     private ArrayList<Location> possibleMoves;
     private Location location;
 
+
+    Piece(Location location, Color color,ChessPieces piece){
+        this.setColor(color);
+        this.setLocation(location);
+        this.setPiece(piece);
+    }
     public void move(Location location){
     if(this.getPossibleMoves().contains(location)){
         this.setLocation(location);

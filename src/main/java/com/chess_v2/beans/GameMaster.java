@@ -14,13 +14,7 @@ public class GameMaster {
     Game game;
     public void newGame(){
         game = new Game();
-         Piece[][] board = new Piece[8][8];
-        board[0][0] = new Rook(new Location(0,0), Color.White);
-        board[8][0] = new Rook(new Location(8,0), Color.White);
 
-        board[0][8] = new Rook(new Location(0,0), Color.White);
-        board[8][8] = new Rook(new Location(8,0), Color.White);
-        game.setBoard(board);
     }
 
 

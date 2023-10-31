@@ -1,0 +1,16 @@
+com\chess_v2\beans\Pieces\Bishop.class
+com\chess_v2\beans\Game.class
+com\chess_v2\beans\Pieces\Pawn.class
+com\chess_v2\beans\Pieces\Rook.class
+com\chess_v2\beans\utils\ChessPieces.class
+com\chess_v2\beans\GameMaster.class
+com\chess_v2\beans\Player.class
+com\chess_v2\beans\Pieces\Knight.class
+com\chess_v2\beans\utils\Color.class
+com\chess_v2\beans\Pieces\Piece.class
+com\chess_v2\Main.class
+com\chess_v2\beans\utils\Location.class
+com\chess_v2\beans\Pieces\King.class
+com\chess_v2\beans\Pieces\Queen.class
+com\chess_v2\beans\Userinterface\visualStuff.class
+com\chess_v2\beans\Board.class

@@ -14,21 +14,20 @@ import com.chess_v2.beans.utils.Location;
 import java.util.ArrayList;
 
 public class Pawn extends Piece {
-     public Pawn(Location location, Color color){
-        this.setLocation(location);
-        this.setColor(color);
-        this.setPiece(ChessPieces.Pawn);
-    }
-
     private boolean isFirstMove = true;
+
+    public Pawn(Location location, Color color) {
+        super(location, color, ChessPieces.Pawn);
+
+    }
 
     @Override
     public void move(Location location) {
-        if(this.getPossibleMoves().contains(location)){
+        if (this.getPossibleMoves().contains(location)) {
             this.setLocation(location);
         }
-        if(isFirstMove){
-            this.isFirstMove=false;
+        if (isFirstMove) {
+            this.isFirstMove = false;
         }
     }
 
