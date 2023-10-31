@@ -13,13 +13,14 @@ import java.io.FileNotFoundException;
 public class Game {
     private Player p1;
     private Player p2;
-//    private Board board = new Board();
+    private Board board;
 
     private String PGN;
 
     Game(String[] PlayerNames) throws FileNotFoundException {
         p1 = new Player(PlayerNames[0], Color.White);
         p2 = new Player(PlayerNames[1],Color.Black);
+        board = new Board();
     }
 
 

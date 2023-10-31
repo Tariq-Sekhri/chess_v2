@@ -1,12 +1,9 @@
 package com.chess_v2.beans.Userinterface;
 
 
-import com.chess_v2.beans.Pieces.Piece;
-import com.chess_v2.beans.Pieces.Queen;
-import com.chess_v2.beans.utils.ChessPieces;
-import com.chess_v2.beans.utils.Location;
+import com.chess_v2.beans.Pieces.*;
+import com.chess_v2.beans.utils.*;
 import javafx.application.Application;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -42,10 +39,9 @@ public class gui extends Application {
                 grid.add(square, x, y);
             }
         }
-        Queen q1 = new Queen(new Location(1,1), com.chess_v2.beans.utils.Color.Black);
 
-        addPiece(q1);
 
+        initBoard();
         Scene scene = new Scene(grid, 800, 800);
 
         stage.setTitle("Chessboard");
@@ -61,8 +57,20 @@ public class gui extends Application {
     }
 
     public void addPiece(Piece piece) throws FileNotFoundException {
-        grid.add(piece.getImageVeiw(),piece.getLocation().getX(),piece.getLocation().getX());
+        grid.add(piece.getImageVeiw(),piece.getLocation().getX(),piece.getLocation().getY());
     }
 
+    public void initBoard() throws FileNotFoundException {
+        for (int i = 0; i < 8; i++) {
+        addPiece(new Pawn(new Location(i,1), com.chess_v2.beans.utils.Color.Black));
 
+        }
+
+        for (int i = 0; i < 8; i++) {
+            addPiece(new Pawn(new Location(i,1), com.chess_v2.beans.utils.Color.Black));
+
+        }
+        addPiece(new Queen(new Location(3,4), com.chess_v2.beans.utils.Color.Black));
+        addPiece(new Queen(new Location(2,2), com.chess_v2.beans.utils.Color.Black));
+    }
 }
