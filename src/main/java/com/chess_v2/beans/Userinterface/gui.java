@@ -1,32 +1,36 @@
 package com.chess_v2.beans.Userinterface;
 
 
+import com.chess_v2.beans.Pieces.Piece;
+import com.chess_v2.beans.Pieces.Queen;
+import com.chess_v2.beans.utils.ChessPieces;
+import com.chess_v2.beans.utils.Location;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import lombok.Data;
 
-import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
-public class visualStuff extends Application {
+@Data
+public class gui extends Application {
+    private GridPane grid;
+
     public static void main(String[] args) {
         launch(args);
     }
+
     @Override
     public void start(Stage stage) throws Exception {
 
-        Image image = new Image(new FileInputStream("src/main/resources/PieceIcons/chessImages.png"));
 
-        //Setting the image view
-        ImageView kingImageVeiw = new ImageView(image);
-        kingImageVeiw.setViewport(new Rectangle2D(20,20,96,96));
-
-        GridPane grid = new GridPane();
+        grid = new GridPane();
+        Queen q1 = new Queen(new Location(0,0), com.chess_v2.beans.utils.Color.Black);
+        addPiece(q1);
 
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
@@ -34,12 +38,14 @@ public class visualStuff extends Application {
                 if ((x + y) % 2 == 0) {
                     square.setFill(Color.WHITE);
                 } else {
-                    square.setFill(Color.BLACK);
+                    square.setFill(Color.GREEN);
                 }
                 grid.add(square, x, y);
             }
         }
-        grid.add(kingImageVeiw, 0,0);
+
+
+
         Scene scene = new Scene(grid, 800, 800);
 
         stage.setTitle("Chessboard");
@@ -48,10 +54,14 @@ public class visualStuff extends Application {
         stage.setMinHeight(800);
         stage.setMinWidth(800);
 
-        stage.setMaxHeight(1000);
-        stage.setMaxWidth(1000);
+        stage.setMaxHeight(900);
+        stage.setMaxWidth(900);
         stage.show();
 
+    }
+
+    public void addPiece(Piece piece) throws FileNotFoundException {
+        grid.add(piece.getImageVeiw(),piece.getLocation().getX(),piece.getLocation().getX());
     }
 
 

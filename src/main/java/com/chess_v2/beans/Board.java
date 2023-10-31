@@ -4,11 +4,13 @@ import com.chess_v2.beans.Pieces.*;
 import com.chess_v2.beans.utils.*;
 import lombok.Data;
 
+import java.io.FileNotFoundException;
+
 @Data
-public class Board {
+public class Board  {
     private Piece[][] board = new Piece[8][8];
 
-    public Board() {
+    public Board() throws FileNotFoundException {
         for (int i = 0; i < 8; i++) {
             board[1][i] = new Pawn(new Location(1, i),Color.White);
             board[6][i] = new Pawn(new Location(6, i),Color.Black );
