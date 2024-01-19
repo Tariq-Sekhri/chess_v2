@@ -1,7 +1,5 @@
 package com.chess_v2.beans;
 
-
-import com.chess_v2.beans.UserInterface.BoardGui;
 import lombok.Data;
 
 

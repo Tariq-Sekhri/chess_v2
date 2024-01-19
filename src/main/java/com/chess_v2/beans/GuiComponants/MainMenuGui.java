@@ -1,4 +1,4 @@
-package com.chess_v2.beans.UserInterface;
+package com.chess_v2.beans.GuiComponants;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
